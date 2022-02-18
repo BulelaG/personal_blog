@@ -1,19 +1,18 @@
-const express = require('express');
-const cors = require('cors');
+const express = require("express");
+const cors = require("cors");
 
 
 // Needed fixes
 // https://stackoverflow.com/questions/50093144/mysql-8-0-client-does-not-support-authentication-protocol-requested-by-server
 
 // const contactRouter = require(".routes/contactRouter");
-require('dotenv').config()
 
 const useRouter = require("./userRouter");
 const postRouter = require("./postRouter");
 
 
 const app = express();
-app.set("port", process.env.PORT|| 5555);
+app.set("port", process.env.PORT || 5555);
 
 app.use(express.json());
 app.use(cors());
